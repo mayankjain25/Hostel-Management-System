@@ -1,0 +1,14 @@
+.footerContainer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: flex-end;
+    font-size: 0.8rem;
+    color:lightcoral;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translate(-50%,0);
+    font-weight: 200;
+}

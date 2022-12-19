@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
+import FrontComponent from '../components/FrontComponent'
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
         <title>Hostel Management System</title>
       </Head>
       <Navbar />
-      <Hero />
+      <FrontComponent />
+      {/* <Hero /> */}
       <Footer className={styles.footer} />
     </div>
   )

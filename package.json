@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.0",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "formik": "^2.2.9",

@@ -1,0 +1,23 @@
+.container{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    /* background-color: #f5f5f5; */
+}
+
+.mainText{
+    animation: slow-reveal 1.5s ease-in-out;
+}
+
+@keyframes slow-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

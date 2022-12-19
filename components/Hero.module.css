@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* height:100vh; */
 }
 
 .formContainer{
@@ -34,7 +35,7 @@
     border:2px solid lightgray;
 }
 
-.formContainer>button{
+/* .formContainer>button{
     margin-top:20px;
     padding:10px;
     border-radius: 8px;
@@ -50,7 +51,7 @@
     cursor: pointer;
     text-decoration: underline;
     width:5%;
-}
+} */
 
 .signUpText{
     color:blue;

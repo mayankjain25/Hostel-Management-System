@@ -36,7 +36,7 @@
 .signUpForm>input{
     margin: 10px;
     padding:10px;
-    width:150%;
+    width:90%;
     border-radius:10px;
     border: 1px solid red;
 }

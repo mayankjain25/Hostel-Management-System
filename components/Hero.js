@@ -10,16 +10,16 @@ const Hero = () => {
     
 
             <form className={styles.formContainer}>
-                <input type='text' placeholder='roll number' />
-                <input type='email' placeholder='university email address' />
-                <input type='email' placeholder='password' />
+                <input type='text' name="rollNumber" placeholder='roll number' />
+                <input type='email' name="email" placeholder='university email address' />
+                <input type='email' name="password" placeholder='password' />
                 <Button variant="outlined" color="success" type="submit">login</Button>
 
             </form>
         
         
 
-        <h5>Don't have an account? <Link href='/signup'><span className={styles.signUpText}>Sign Up</span></Link></h5>
+        <h5>don't have an account? <Link href='/signup'><span className={styles.signUpText}>sign up</span></Link></h5>
             <Link href="/">
 
             <Button variant="outlined" style={{marginTop:'10px'}}>Home Page</Button>

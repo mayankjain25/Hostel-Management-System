@@ -1,0 +1,46 @@
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height:100vh; */
+    flex-direction: column;
+}
+
+.mainText{
+    animation: slow-reveal 1.5s ease-in-out;
+}
+
+@keyframes slow-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subText{
+    margin-top:-10px;
+}
+
+.signUpForm{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpForm>input{
+    margin: 10px;
+    padding:10px;
+    width:150%;
+    border-radius:10px;
+    border: 1px solid red;
+}
+
+.submitButton{
+    margin-top: 20px;
+}

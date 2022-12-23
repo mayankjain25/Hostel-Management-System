@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 const studentDashboard = () => {
   const {status,data} = useSession()
-  console.log(status)
+  // console.log(status)
 
   useEffect(()=>{
     if(status==="unauthenticated"){
@@ -14,7 +14,7 @@ const studentDashboard = () => {
       Router.push('/login')
     }
   },[status])
-  console.log(data)
+  // console.log(data)
   // console.log(session)
   if(status==="authenticated"){
     
@@ -23,7 +23,7 @@ const studentDashboard = () => {
         <Head>
           <title>{data.user.name}'s Dashboard - HMS</title>
         </Head>
-        <Navbar email={data.user.email}/>
+        <Navbar email={data.user.email} logOut='true'/>
         <center>
           <h2><i>hola</i>, {(data.user.name).toLowerCase()} </h2>
           <p>How's your day today?</p>

@@ -42,6 +42,7 @@ export const authOptions = {
             if(!user){
               throw new Error("User has not been registered yet")
             }
+            console.log("user",user)
             return user
         },
         

@@ -1,6 +1,7 @@
 import connect from "../../lib/mongodb";
 import User from "../../model/schema";
 import {Toaster,toast} from 'react-hot-toast'
+import cors from 'cors'
 
 connect()
 

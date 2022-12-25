@@ -5,45 +5,42 @@ import Link from 'next/link'
 import Router, { useRouter } from 'next/router'
 import {signIn } from 'next-auth/react'
 import { useEffect } from 'react'
+// import { createContext } from 'react'
+import { useContext } from 'react'
+import { UserContext } from '../pages/login'
 
 const Hero = () => {
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
   const [message,setMessage] = useState(null)
+  // const UserContext = createContext(null)
 
   // useEffect(()=>{
   //   console.log(email)
   // },email)
   async function handleSubmit(e){
     e.preventDefault()
-    // const res = await fetch('/api/login',{
-    //   method:'POST',
-    //   headers:{
-    //     'Content-Type':'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     email,
-    //     password
-    //   })
-    // }).then((res)=>res.json())
-
-    // const token = res.token
-    // if(token){
-    //   Router.push('/studentDashboard')
-    // }
+  
     console.log(email,password)
     let options = {redirect:false,email,password}
     const res = await signIn('credentials',options)
     setMessage(null)
     if(res?.error){
-      setMessage(res.error)
+      // setMessage(res.error)
+      return Router.push('/error')
     }
 
-    console.log(res)
+    console.log('will be logging res below')
+    console.log(res);
+
+    // const {updateUser} = useContext(UserContext)
+    // updateUser(res)
+    // console.log(res)
     return Router.push('/studentDashboard')
 
   }
   return (
+
     <div className={styles.container}>
         <h2>let's log you in!</h2>
     

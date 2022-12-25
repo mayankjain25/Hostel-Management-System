@@ -1,0 +1,25 @@
+.profileCard{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid red;
+    width:fit-content;
+    padding:20px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    box-shadow: 1px -1px 4px 2px #000;
+    transition:0.3s;
+}
+
+.profileCard:hover{
+    box-shadow: -3px 1px 5px 3px #5A5A5A;
+}
+
+
+.profileContainer{
+    text-align:left;
+}
+
+.text-bold{
+    font-weight: bold;
+}

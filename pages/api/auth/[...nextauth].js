@@ -2,7 +2,8 @@ import NextAuth from "next-auth"
 import CredentialsProvider  from "next-auth/providers/credentials"
 import connect from "../../../lib/mongodb";
 import User from "../../../model/schema";
-
+import { useContext } from "react";
+import { UserContext } from "../../login";
 
 export const authOptions = {
   // Configure one or more authentication providers
@@ -20,6 +21,7 @@ export const authOptions = {
       },
       async authorize(credentials) {
             connect()
+            console.log('entered author function')
             const {email,password} = credentials
             // const res = await fetch("/api/login",{
             //     method:'POST',
@@ -38,12 +40,16 @@ export const authOptions = {
             // return null;
 
             // const {email,password} = req.body
-            const user = await User.findOne({email,password})
-            if(!user){
+            const user1 = await User.findOne({email,password})
+            console.log('user1',user1)
+            if(!user1){
               throw new Error("User has not been registered yet")
             }
-            console.log("user",user)
-            return user
+            // const res=await user1.json()
+            // console.log("user",user)
+            // const {updateUser} = useContext(UserContext)
+            // updateUser(user1)
+            return user1
         },
         
     })

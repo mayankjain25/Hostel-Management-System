@@ -8,7 +8,7 @@ import IssueDisplay from '../components/IssueDisplay'
 import styles from '../components/FrontComponent.module.css'
 
 
-const studentDashboard = () => {
+const StudentDashboard = () => {
   const {status,data} = useSession()
   const [stat,setStat] = useState('unauthenticated')
   const [userInfo,setUserInfo] = useState({
@@ -65,4 +65,4 @@ const studentDashboard = () => {
   }
 }
 
-export default studentDashboard
+export default StudentDashboard

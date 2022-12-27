@@ -24,7 +24,7 @@ export default async function handler(req,res){
         const val = await user.json()
         return val
         
-        // res.redirect('/studentDashboard')
+        // res.redirect('/StudentDashboard')
 
     }
     catch(error){

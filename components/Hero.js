@@ -37,7 +37,7 @@ const Hero = () => {
     // const {updateUser} = useContext(UserContext)
     // updateUser(res)
     // console.log(res)
-    return Router.push('/studentDashboard')
+    return Router.push('/StudentDashboard')
 
   }
   return (

@@ -21,11 +21,6 @@ const FrontComponent = () => {
             
               <Link href='/login'><Button variant="outlined" color="error" style={{marginTop:'10px'}}>Login</Button></Link>
               <Link href='/signup'><Button variant="outlined" color="error" style={{marginLeft:'20px',marginTop:'10px'}}>Sign Up</Button></Link>
-            
-            {/* <center>
-
-          <Guest />
-            </center> */}
           </div>
 
 

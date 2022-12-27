@@ -1,14 +1,26 @@
 import React, { useEffect,useState } from 'react'
 import axios from 'axios'
-import { Avatar,StyledBadge } from '@mui/material'
+import { Avatar,Button,StyledBadge } from '@mui/material'
 import styles from './IssueDisplay.module.css'
+import Warning from '/assets/warning.svg'
+import Image from 'next/image'
+import Link from 'next/link'
+// import bcrypt from 'bcrypt'
 
 const IssueDisplay = ({email,password}) => {
+    
+    const [userInfo,setUserInfo] = useState()
+    const [issueInfo,setIssueInfo] =useState()
+    const [userIdHash,setUserIdHash] = useState()
 
     async function getIssueDetails(){
-        const res = await axios.get('/api/issue')
-        const issue = await res.data
-        console.log(issue)
+        // const res = axios.get(`http://localhost:5001/issues/${email}`,{
+        //     headers:{
+        //         'Content-Type': 'application/json',
+        // }})
+
+        // await setIssueInfo(res.data)
+
     }
 
     async function getUserDetails(){
@@ -22,17 +34,23 @@ const IssueDisplay = ({email,password}) => {
         await setUserInfo(res.data)
     }
 
+
+    async function hashUserUniqueId(){
+        const hash = await bcrypt.hashSync(userInfo._id,10)
+        setUserIdHash(hash)
+    }
+
     useEffect(()=>{
         getUserDetails();
-        // getissueDetails();
+        getIssueDetails();
+        // hashUserUniqueId()
     },[])
 
 
-    const [userInfo,setUserInfo] = useState()
 
 
   return (
-    <div>
+   userInfo &&  <div>
         <div className={styles.profileCard}>
             {console.log(userInfo)}
             {/* {userInfo && <p>Name is {userInfo.name}</p>} */}
@@ -43,7 +61,16 @@ const IssueDisplay = ({email,password}) => {
                 <p>Hostel: {userInfo.hostelName}</p>
                 <p>Room Number: {userInfo.roomNumber}</p>
             </div>
+
         </div>
+        <div className='no-issues'>
+            <Image src={Warning} width={40} height={40} style={{color:'gray'}}></Image>
+            {!issueInfo && <p>no issues added currently</p>}
+        </div>
+        <Link href={{ pathname: '/createIssue', query: { data: JSON.stringify(userInfo._id) } }}>
+
+            <Button variant="outlined" color="success">Add Issue</Button>
+        </Link>
     </div>
   )
 }

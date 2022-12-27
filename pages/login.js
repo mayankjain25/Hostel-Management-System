@@ -3,6 +3,7 @@ import React, { createContext, useState } from 'react'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
+import Guest from '../components/Guest'
 
 
 const UserContext = createContext({
@@ -48,6 +49,7 @@ const login = () => {
           </Head>
           <Navbar />
           <Hero />
+          {/* <Guest /> */}
           <Footer />
       </div>
     </UserContext.Provider>

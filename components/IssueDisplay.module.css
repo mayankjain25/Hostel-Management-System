@@ -1,7 +1,22 @@
+.issueDisplayContainer{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.profileContainer{
+    display:flex;
+    flex-direction: column;
+}
+
+
 .profileCard{
     display:flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: left;
     border:1px solid red;
     width:fit-content;
     padding:20px;

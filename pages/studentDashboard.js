@@ -3,10 +3,9 @@ import { useSession } from 'next-auth/react'
 import Router from 'next/router'
 import Navbar from '../components/Navbar'
 import Head from 'next/head'
-import { useContext } from 'react'
-import { UserContext } from './login'
 import axios from 'axios'
 import IssueDisplay from '../components/IssueDisplay'
+import styles from '../components/FrontComponent.module.css'
 
 
 const studentDashboard = () => {
@@ -55,8 +54,8 @@ const studentDashboard = () => {
         </Head>
         <Navbar email={data.user.email} logOut='true'/>
         <center>
-          <h2><i>hola</i>, {(data.user.name).toLowerCase()} </h2>
-          <p>How's your day today?</p>
+          <h2 className={styles.mainText}><i>hola</i>, {(data.user.name).toLowerCase()} </h2>
+          <p style={{marginTop:'-10px'}}>How's your day today?</p>
         {/* {findUserProfile()} */}
         <IssueDisplay email={data.user.email} password={data.user.password}/>
 

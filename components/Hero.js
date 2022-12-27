@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 // import { createContext } from 'react'
 import { useContext } from 'react'
 import { UserContext } from '../pages/login'
+import Guest from './Guest'
 
 const Hero = () => {
   const [email,setEmail] = useState('')
@@ -61,6 +62,8 @@ const Hero = () => {
             <Button variant="outlined" style={{marginTop:'10px'}}>Home Page</Button>
             </Link>
             <p style={{color:'red'}}>{message}</p>
+
+            <Guest />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Router from 'next/router'
 import Head from 'next/head'
 import {FormControl,InputLabel,Select,MenuItem} from '@mui/material'
-
+import Link from 'next/link'
 
 const createIssue = () => {
 
@@ -94,6 +94,10 @@ const createIssue = () => {
             <input type="text" name="priority" placeholder="issue priority"></input> */}
             <Button variant="outlined" color="success" type="submit">Submit</Button>
         </form>
+
+        <Link href="/studentDashboard">
+            <Button variant="outlined" color="success">back to dashboard</Button>
+        </Link>
 
     </div>
   )

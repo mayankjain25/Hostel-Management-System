@@ -11,8 +11,9 @@ const Navbar = ({email,logOut}) => {
         <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
           <Link href="/">
 
-            <span className='bold-800'>Hostel</span> Management System
+            <span className='bold-800'>Hostel</span> Management System  
           </Link>
+          <span style={{marginLeft:'20px'}}>  | {new Date().toDateString()}</span>
         </div>
         {/* <Clock format={'HH:mm:ss'} ticking={true} /> */}
           <div style={{display:'flex',alignItems:'center',justifyContent:"center"}}>

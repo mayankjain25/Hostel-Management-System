@@ -1,0 +1,12 @@
+.guestContainer{
+    display:flex;
+    text-align: left;
+    flex-direction: column;
+    /* background-color: lightgray; */
+    font-size:11px;
+    padding: 10px;
+    /* border:1px solid aquamarine; */
+    /* border-radius:10px; */
+    width:max-content;
+    margin-top:30px;
+}

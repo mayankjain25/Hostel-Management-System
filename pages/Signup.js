@@ -6,7 +6,7 @@ import styles from '../components/signup.module.css'
 import Head from 'next/head'
 import { Toaster } from 'react-hot-toast'
 
-const signup = () => {
+const Signup = () => {
   return (
     <div>
       <div><Toaster /></div>
@@ -17,7 +17,7 @@ const signup = () => {
       <div className={styles.mainContainer}>
 
         <h1 className={styles.mainText}>let us know about you</h1>
-        <p className={styles.subText}>(it won't take long)</p>
+        <p className={styles.subText}>(it won&apos;t take long)</p>
 
         <form method="post" action="/api/register" className={styles.signUpForm}>
           <input type='text' name="name" placeholder='name' />
@@ -36,4 +36,4 @@ const signup = () => {
   )
 }
 
-export default signup
+export default Signup

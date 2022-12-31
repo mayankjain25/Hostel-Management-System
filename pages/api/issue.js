@@ -12,7 +12,7 @@ export default async function handler(req,res){
 
         return user
         
-        // res.redirect('/studentDashboard')
+        // res.redirect('/StudentDashboard')
 
     }
     catch(error){

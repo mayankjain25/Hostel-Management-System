@@ -2,8 +2,7 @@ import NextAuth from "next-auth"
 import CredentialsProvider  from "next-auth/providers/credentials"
 import connect from "../../../lib/mongodb";
 import User from "../../../model/schema";
-import { useContext } from "react";
-import { UserContext } from "../../login";
+
 
 export const authOptions = {
   // Configure one or more authentication providers

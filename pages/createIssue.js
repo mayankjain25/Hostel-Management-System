@@ -50,7 +50,7 @@ const createIssue = () => {
 
         console.log(res)
         if(res.status===200){
-            Router.push('/studentDashboard')
+            Router.push('/StudentDashboard')
         }
 
       
@@ -95,7 +95,7 @@ const createIssue = () => {
             <Button variant="outlined" color="success" type="submit">Submit</Button>
         </form>
 
-        <Link href="/studentDashboard">
+        <Link href="/StudentDashboard">
             <Button variant="outlined" color="success">back to dashboard</Button>
         </Link>
 

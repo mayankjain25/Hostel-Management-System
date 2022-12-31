@@ -17,7 +17,7 @@ const userNotExist = () => {
                 <h2>sigh! an error occurred</h2>
                 <p>looks like you entered an incorrect email and password configuration</p>
                 <p>please try again</p>
-                <Link href='/login'>
+                <Link href='/Login'>
 
                 <Button variant="outlined" color="success">Login</Button>
                 

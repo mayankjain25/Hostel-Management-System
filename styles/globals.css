@@ -30,3 +30,18 @@ a {
 .bold-800 {
   font-weight: 800;
 }
+
+.issues-page-form{
+  display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.issues-page-form > input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid red;
+}

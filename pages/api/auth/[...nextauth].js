@@ -22,32 +22,12 @@ export const authOptions = {
             connect()
             console.log('entered author function')
             const {email,password} = credentials
-            // const res = await fetch("/api/login",{
-            //     method:'POST',
-            //     headers:{
-            //       'Content-Type':'application/json'
-            //     },
-            //     body: JSON.stringify({
-            //       email,
-            //       password
-            //     })
-            //   })
-            
-            // const user = await res.json()
 
-            // if(res.ok && user) return user;
-            // return null;
-
-            // const {email,password} = req.body
             const user1 = await User.findOne({email,password})
             console.log('user1',user1)
             if(!user1){
               throw new Error("User has not been registered yet")
             }
-            // const res=await user1.json()
-            // console.log("user",user)
-            // const {updateUser} = useContext(UserContext)
-            // updateUser(user1)
             return user1
         },
         

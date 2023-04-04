@@ -31,3 +31,18 @@
     border-radius:10px;
     border: 2px solid red;
 }
+
+.loginHint{
+    /* color: #E21143; */
+    /* font-size: 1.5rem; */
+    font-size:0.8rem;
+    font-weight: 600;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginHint>p{
+    margin-left: 10px;
+}

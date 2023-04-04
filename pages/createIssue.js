@@ -5,6 +5,7 @@ import Router from 'next/router'
 import Head from 'next/head'
 import {FormControl,InputLabel,Select,MenuItem} from '@mui/material'
 import Link from 'next/link'
+// import styles from '/styles/issue.css'
 
 const createIssue = () => {
 
@@ -63,8 +64,11 @@ const createIssue = () => {
             <title>Create Issue - HMS</title>
         </Head>
         <Navbar  logOut='true'/>
+        <center>
+
         <h2>fill in your issue details</h2>
-        <form onSubmit={handleSubmit}>
+        </center>
+        <form className='issues-page-form'  onSubmit={handleSubmit}>
             <input type="text" name="title" placeholder="issue title"></input>
             <input type="text" name="description" placeholder="issue description"></input>
             <FormControl sx={{ m: 1, minWidth: 138 }}>
@@ -96,7 +100,10 @@ const createIssue = () => {
         </form>
 
         <Link href="/StudentDashboard">
-            <Button variant="outlined" color="success">back to dashboard</Button>
+            <center>
+
+            <Button variant="outlined" style={{marginTop:'30px'}} color="success">back to dashboard</Button>
+            </center>
         </Link>
 
     </div>

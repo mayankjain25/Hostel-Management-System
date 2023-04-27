@@ -1,0 +1,29 @@
+.container{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    /* background-color: #f5f5f5; */
+}
+
+.mainText{
+    animation: slow-reveal 1.5s ease-in-out;
+    /* background: -webkit-linear-gradient(rgb(237, 59, 59), rgb(144, 94, 94));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    background-image: linear-gradient(60deg, #E21143, #f34878);
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes slow-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

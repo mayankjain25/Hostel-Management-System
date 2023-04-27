@@ -41,7 +41,7 @@ const login = () => {
 
 
   return (
-    <UserContext.Provider value={{user,updateUser}}>
+    // <UserContext.Provider value={{user,updateUser}}>
 
       <div>
           <Head>
@@ -52,9 +52,9 @@ const login = () => {
           {/* <Guest /> */}
           <Footer />
       </div>
-    </UserContext.Provider>
+    // </UserContext.Provider>
   )
 }
 
-export {UserContext}
+// export {UserContext}
 export default login

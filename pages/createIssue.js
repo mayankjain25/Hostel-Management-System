@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, } from 'react'
+import { useSession } from 'next-auth/react'
 import Navbar from '../components/Navbar'
 import Router from 'next/router'
 import Head from 'next/head'
@@ -8,10 +9,17 @@ import Link from 'next/link'
 // import styles from '/styles/issue.css'
 
 const createIssue = () => {
-
+    const {status,data} = useSession()
     const [userId,setUserId] = useState()
     const [issuePriority, setIssuePriority] = useState()
     const [issueStatus, setIssueStatus] = useState()
+
+    useEffect(()=>{
+        if(status==="unauthenticated"){
+          // alert("You are not logged in! Redirecting to login page...")
+          Router.push('/login')
+        }
+     },[status])
 
     useEffect( ()=>{
     const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -71,6 +79,7 @@ const createIssue = () => {
         <form className='issues-page-form'  onSubmit={handleSubmit}>
             <input type="text" name="title" placeholder="issue title"></input>
             <input type="text" name="description" placeholder="issue description"></input>
+            <input type="text" name="hostelName" placeholder="hostel name"></input>
             <FormControl sx={{ m: 1, minWidth: 138 }}>
                 <InputLabel id="demo-simple-select-label" name="status">Issue Status</InputLabel>
                 <Select

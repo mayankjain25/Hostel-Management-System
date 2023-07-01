@@ -44,11 +44,11 @@ const IssueDisplay = ({email,password}) => {
 
     useEffect(()=>{
         getUserDetails();
-    },[])
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(()=>{
         userInfo && getIssueDetails()
-    },[userInfo])
+    },[userInfo]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
    userInfo &&  <div>
@@ -93,7 +93,7 @@ const IssueDisplay = ({email,password}) => {
         </TableContainer>}
 
         {
-                  issueInfo &&  issueInfo.length===0 &&  <center> <p style={{color:'gray'}}>you haven't added any issue yet</p></center> 
+                  issueInfo &&  issueInfo.length===0 &&  <center> <p style={{color:'gray'}}>you haven&apos;t added any issue yet</p></center> 
         }
 
         <Link href={{ pathname: '/createIssue', query: { data: JSON.stringify(userInfo._id) } }}>
@@ -116,7 +116,7 @@ const IssueDisplay = ({email,password}) => {
             </div>
         </div>
         {!issueInfo && <div className='no-issues'>
-            <Image src={Warning} width={40} height={40} style={{color:'gray'}}></Image>
+            <Image src={Warning} width={40} height={40} style={{color:'gray'}} alt='warning-image'></Image>
             <p>no issues added currently</p>
         </div>}
         

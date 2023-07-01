@@ -13,7 +13,7 @@ const Error = () => {
         </Head>
         <center>
           
-                <Image src={Warning} width={100} height={100}></Image>
+                <Image src={Warning} width={100} height={100} alt="warning-text"></Image>
                 <h2>sigh! an error occurred</h2>
                 <p>please try again</p>
                 <Link href='/'>

@@ -13,7 +13,7 @@ const UserNotExist = () => {
         </Head>
         <center>
           
-                <Image src={Warning} width={100} height={100}></Image>
+                <Image src={Warning} width={100} height={100} alt='warning-image'></Image>
                 <h2>sigh! an error occurred</h2>
                 <p>looks like you entered an incorrect email and password configuration</p>
                 <p>please try again</p>

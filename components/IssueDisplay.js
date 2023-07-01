@@ -12,7 +12,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-// import bcrypt from 'bcrypt'
 
 const IssueDisplay = ({email,password}) => {
     
@@ -21,6 +20,8 @@ const IssueDisplay = ({email,password}) => {
     const [userIdHash,setUserIdHash] = useState()
 
     async function getIssueDetails(){
+
+        console.log('get issue details called')
 
         let id = userInfo._id
         id= String(id)

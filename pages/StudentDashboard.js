@@ -50,12 +50,12 @@ const StudentDashboard = () => {
     return (
       <div>
         <Head>
-          <title>{data.user.name}'s Dashboard - HMS</title>
+          <title>{data.user.name}&apos;s Dashboard - HMS</title>
         </Head>
         <Navbar email={data.user.email} logOut='true'/>
         <center>
           <h2 className={styles.mainText}><i>hola</i>, {(data.user.name).toLowerCase()} </h2>
-          <p style={{marginTop:'-10px'}}>How's your day today?</p>
+          <p style={{marginTop:'-10px'}}>How&apos;s your day today?</p>
         {/* {findUserProfile()} */}
         <IssueDisplay email={data.user.email} password={data.user.password}/>
 

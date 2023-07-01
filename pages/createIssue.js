@@ -36,10 +36,11 @@ const createIssue = () => {
         e.preventDefault();
 
         console.log(e)
-        console.log(e.target[0].value)
-        console.log(e.target[1].value)
-        console.log(e.target[2].value)
-        console.log(e.target[4].value)
+        console.log(e.target[0].value) //issue title
+        console.log(e.target[1].value) //issue description
+        console.log(e.target[2].value) //hostel name
+        console.log(e.target[3].value) //issue status
+        console.log(e.target[5].value) //issue priority
 
 
         const res = await fetch(`http://localhost:5001/issues/${userId}`,{
@@ -51,8 +52,9 @@ const createIssue = () => {
             body: JSON.stringify({
                 title: e.target[0].value,
                 description: e.target[1].value,
-                status: e.target[2].value,
-                priority: e.target[4].value,
+                hostelName: e.target[2].value,
+                status: e.target[3].value,
+                priority: e.target[5].value,
                 student: userId
             })
         })

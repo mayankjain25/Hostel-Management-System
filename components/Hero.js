@@ -56,7 +56,7 @@ const Hero = () => {
         
         
 
-        <h5>don&apos;t have an account? <Link href='/signup'><span className={styles.signUpText}>sign up</span></Link></h5>
+        <h5>don&apos;t have an account? <Link href='/Signup'><span className={styles.signUpText}>sign up</span></Link></h5>
             <Link href="/">
 
             <Button variant="outlined" style={{marginTop:'10px'}}>Home Page</Button>

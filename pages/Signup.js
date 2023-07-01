@@ -4,9 +4,39 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import styles from '../components/signup.module.css'
 import Head from 'next/head'
-import { Toaster } from 'react-hot-toast'
-
+import { Toaster,toast } from 'react-hot-toast'
+import axios from 'axios'
+import { useRouter } from 'next/router'
+import Router from 'next/router'
 const Signup = () => {
+
+  // const router = useRouter()
+  const handleSubmit = async (e)=>{
+    e.preventDefault();
+
+    const res = await axios.post(`http://localhost:5001/users/`, {
+      name: e.target[0].value,
+      rollNumber: e.target[1].value,
+      email: e.target[2].value,
+      contact: e.target[3].value,
+      hostelName: e.target[4].value,
+      roomNumber: e.target[5].value,
+      password: e.target[6].value,
+
+    })
+    if(res.status === 200){
+      console.log(res)
+      console.log('user created')
+      toast.success("User created successfully")
+      setTimeout(()=>{
+         Router.push('/')
+      },1000)
+    }
+    else{
+      toast.error("User not created")
+      router.push('/Error')
+    }
+  }
   return (
     <div>
       <div><Toaster /></div>
@@ -19,7 +49,7 @@ const Signup = () => {
         <h1 className={styles.mainText}>let us know about you</h1>
         <p className={styles.subText}>(it won&apos;t take long)</p>
 
-        <form method="post" action="/api/register" className={styles.signUpForm}>
+        <form onSubmit={handleSubmit} className={styles.signUpForm}>
           <input type='text' name="name" placeholder='name' />
           <input type='text' name="rollNumber" placeholder='roll number' />
           <input type='email' name="email" placeholder='university email address' />

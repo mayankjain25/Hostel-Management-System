@@ -20,14 +20,10 @@ const IssueDisplay = ({email,password}) => {
     const [userIdHash,setUserIdHash] = useState()
 
     async function getIssueDetails(){
-
-        console.log('get issue details called')
-
         let id = userInfo._id
         id= String(id)
 
         const res = await fetch(`https://hms-backend-89o3.onrender.com/issues/${String(id)}`).then((res)=>res.json()).then((data)=>setIssueInfo(data))
-        console.log(issueInfo)
         
     }
 

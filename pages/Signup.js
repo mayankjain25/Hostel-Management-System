@@ -14,7 +14,7 @@ const Signup = () => {
   const handleSubmit = async (e)=>{
     e.preventDefault();
 
-    const res = await axios.post(`http://localhost:5001/users/`, {
+    const res = await axios.post(`https://hms-backend-89o3.onrender.com/users/`, {
       name: e.target[0].value,
       rollNumber: e.target[1].value,
       email: e.target[2].value,

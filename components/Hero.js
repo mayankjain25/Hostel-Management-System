@@ -7,7 +7,7 @@ import {signIn } from 'next-auth/react'
 import { useEffect } from 'react'
 // import { createContext } from 'react'
 import { useContext } from 'react'
-import { UserContext } from '../pages/login'
+import { UserContext } from '../pages/Login'
 import Guest from './Guest'
 
 const Hero = () => {
@@ -43,7 +43,7 @@ const Hero = () => {
   return (
 
     <div className={styles.container}>
-        <h2>let's log you in!</h2>
+        <h2>let&apos;s log you in!</h2>
     
 
             <form method="post" action="/api/login" className={styles.formContainer}>
@@ -56,7 +56,7 @@ const Hero = () => {
         
         
 
-        <h5>don't have an account? <Link href='/signup'><span className={styles.signUpText}>sign up</span></Link></h5>
+        <h5>don&apos;t have an account? <Link href='/signup'><span className={styles.signUpText}>sign up</span></Link></h5>
             <Link href="/">
 
             <Button variant="outlined" style={{marginTop:'10px'}}>Home Page</Button>

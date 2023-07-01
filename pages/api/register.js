@@ -9,7 +9,6 @@ connect()
 
 export default async function handler(req,res){
     console.log('handler entered')
-    const router = useRouter()
     try{
 
         const user = await User.create(req.body)
@@ -18,7 +17,7 @@ export default async function handler(req,res){
             return res.json({error: 'User could not be created'})
         }
         else{
-            router.push('/')
+           
         }
 
 
@@ -26,7 +25,7 @@ export default async function handler(req,res){
         toast.error("Not able to create a new user")
         console.log(error.message)
 
-        router.push('/Error')
+        // router.push('/Error')
 
     }
 }

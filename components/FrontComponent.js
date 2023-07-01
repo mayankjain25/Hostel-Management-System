@@ -20,7 +20,7 @@ const FrontComponent = () => {
             <p>please <span style={{color:'red',fontWeight:'bold'}}>login/signup</span> to continue</p>
             
               <Link href='/Login'><Button variant="outlined" color="error" style={{marginTop:'10px'}}>Login</Button></Link>
-              <Link href='/Lignup'><Button variant="outlined" color="error" style={{marginLeft:'20px',marginTop:'10px'}}>Sign Up</Button></Link>
+              <Link href='/Signup'><Button variant="outlined" color="error" style={{marginLeft:'20px',marginTop:'10px'}}>Sign Up</Button></Link>
           </div>
 
 

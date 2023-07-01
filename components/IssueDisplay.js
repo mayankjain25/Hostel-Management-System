@@ -96,7 +96,7 @@ const IssueDisplay = ({email,password}) => {
                   issueInfo &&  issueInfo.length===0 &&  <center> <p style={{color:'gray'}}>you haven&apos;t added any issue yet</p></center> 
         }
 
-        <Link href={{ pathname: '/createIssue', query: { data: JSON.stringify(userInfo._id) } }}>
+        <Link href={{ pathname: '/CreateIssue', query: { data: JSON.stringify(userInfo._id) } }}>
             <Button variant="outlined" color="success" style={{marginTop:'50px'}}>Add Issue</Button>
         </Link>
     </div>

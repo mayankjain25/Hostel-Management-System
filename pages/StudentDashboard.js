@@ -20,7 +20,7 @@ const StudentDashboard = () => {
   useEffect(()=>{
     if(status==="unauthenticated"){
       // alert("You are not logged in! Redirecting to login page...")
-      Router.push('/login')
+      Router.push('/Login')
     }
  },[status])
 

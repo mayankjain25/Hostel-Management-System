@@ -18,7 +18,7 @@ const UserContext = createContext({
       v:''
 })
 
-const login = () => {
+const Login = () => {
   
     const [user,setUser] = useState({
       id:'',
@@ -57,4 +57,4 @@ const login = () => {
 }
 
 // export {UserContext}
-export default login
+export default Login

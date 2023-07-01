@@ -8,7 +8,7 @@ import {FormControl,InputLabel,Select,MenuItem} from '@mui/material'
 import Link from 'next/link'
 // import styles from '/styles/issue.css'
 
-const createIssue = () => {
+const CreateIssue = () => {
     const {status,data} = useSession()
     const [userId,setUserId] = useState()
     const [issuePriority, setIssuePriority] = useState()
@@ -121,4 +121,4 @@ const createIssue = () => {
   )
 }
 
-export default createIssue
+export default CreateIssue

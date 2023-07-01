@@ -28,7 +28,6 @@ const Signup = () => {
           <input type='text' name="roomNumber" placeholder='room number' />
           <input type='password' name="password" placeholder='choose a password' />
           <Button type="submit" variant="outlined" color="error" className={styles.submitButton}>Sign Up</Button>
-
         </form>
       </div>
       <Footer />

@@ -26,13 +26,13 @@ const IssueDisplay = ({email,password}) => {
         let id = userInfo._id
         id= String(id)
 
-        const res = await fetch(`http://localhost:5001/issues/${String(id)}`).then((res)=>res.json()).then((data)=>setIssueInfo(data))
+        const res = await fetch(`https://hms-backend-89o3.onrender.com/issues/${String(id)}`).then((res)=>res.json()).then((data)=>setIssueInfo(data))
         console.log(issueInfo)
         
     }
 
     async function getUserDetails(){
-        const res = await axios.get(`http://localhost:5001/users/${email}`,{
+        const res = await axios.get(`https://hms-backend-89o3.onrender.com/users/${email}`,{
             headers:{
                 'Content-Type': 'application/json',
             }

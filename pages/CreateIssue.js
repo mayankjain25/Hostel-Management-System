@@ -43,7 +43,7 @@ const CreateIssue = () => {
         console.log(e.target[5].value) //issue priority
 
 
-        const res = await fetch(`http://localhost:5001/issues/${userId}`,{
+        const res = await fetch(`https://hms-backend-89o3.onrender.com/issues/${userId}`,{
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json',

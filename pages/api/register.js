@@ -14,11 +14,9 @@ export default async function handler(req,res){
             toast.error("User not created")
             return res.json({error: 'User could not be created'})
         }
-        setTimeout(()=>{
-            
-            toast.success("User created successfully")
+        else{
             res.redirect('/')
-        },1500)
+        }
 
 
     }catch(error){

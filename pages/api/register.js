@@ -25,7 +25,7 @@ export default async function handler(req,res){
         toast.error("Not able to create a new user")
         console.log(error.message)
 
-        res.redirect('/error')
+        res.redirect('/Error')
 
     }
 }

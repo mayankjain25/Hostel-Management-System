@@ -35,7 +35,7 @@ export const authOptions = {
     // ...add more providers here
   ],
   pages:{
-    signIn:'/Login'
+    signIn:'/Login',
   },
   secret:"secret",
   database:process.env.MONGODB_URI,

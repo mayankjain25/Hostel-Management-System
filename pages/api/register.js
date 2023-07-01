@@ -17,8 +17,8 @@ export default async function handler(req,res){
         setTimeout(()=>{
             
             toast.success("User created successfully")
+            res.redirect('/')
         },1500)
-        res.redirect('/')
 
 
     }catch(error){
